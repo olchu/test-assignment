@@ -18,9 +18,6 @@ export function Banner({ children }: { children: ReactNode }) {
 
       {children}
 
-      <figure className={styles.art} aria-hidden="true">
-        {/* svg-art */}
-      </figure>
     </section>
   );
 }
