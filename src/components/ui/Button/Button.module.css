@@ -1,0 +1,62 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 40px;
+  min-width: 134px;
+  width: max-content;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+
+  border-radius: 14px;
+  padding-top: calc(2 * var(--padding-default));
+  padding-bottom: calc(2 * var(--padding-default));
+
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+  gap: 4px;
+
+  transition:
+    background-color 0.18s ease,
+    transform 0.06s ease;
+}
+
+.btn:disabled,
+.btn[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-1px);
+  }
+}
+
+.btn:active {
+  background: var(--btn-bg-active);
+  transform: translateY(0);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--btn-shadow), var(--btn-focus);
+}
