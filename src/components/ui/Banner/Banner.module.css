@@ -19,6 +19,13 @@
     transform 0.25s ease;
 }
 
+@media (max-width: 600px) {
+  .banner {
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
 .banner:hover {
   box-shadow: 0 12px 34px rgba(49, 55, 100, 0.16);
 }

@@ -10,12 +10,14 @@
   transition: transform 0.2s;
 }
 
-.list > li:hover {
-  transform: translateX(2px);
-}
-
 .list > li > svg {
   flex: 0 0 24px;
   flex-shrink: 0;
   display: inline-block;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .list > li:hover {
+    transform: translateX(2px);
+  }
 }

@@ -25,6 +25,7 @@ export const BusinessFundingBanner = () => {
     gap: matches ? 40 : 20,
     direction: matches ? 'row' : 'column',
   };
+  
   return (
     <Banner>
       <Text align="left" as="h2" size="lg">
@@ -41,7 +42,7 @@ export const BusinessFundingBanner = () => {
       </GroupСontainer>
 
       <ButtonGroup>
-        <Button>Apply Now</Button>
+        <Button >Apply Now</Button>
         <Link
           external
           href="https://finom.co"
