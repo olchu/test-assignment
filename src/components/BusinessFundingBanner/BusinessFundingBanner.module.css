@@ -12,3 +12,14 @@
     display: none;
   }
 }
+
+@keyframes float {
+  0%, 100% { transform: translate(0,0); }
+  50% { transform: translate(-6px, -4px); }
+}
+.art {
+  animation: float 4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .art { animation: none; }
+}

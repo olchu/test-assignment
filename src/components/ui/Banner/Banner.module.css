@@ -13,6 +13,14 @@
 
   width: 700px;
   overflow: hidden;
+
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.banner:hover {
+  box-shadow: 0 12px 34px rgba(49, 55, 100, 0.16);
 }
 
 .content {
@@ -38,9 +46,9 @@
   background: var(--btn-neutral-bg);
   cursor: pointer;
 
-  transition: background-color 0.2s ease;
+  transition: background 0.2s ease;
 }
 
 .close:hover {
-  /* background-color: rgba(0, 0, 0, 0.05); */
+  background: #ecefff;
 }

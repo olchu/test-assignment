@@ -7,6 +7,11 @@
 .list > li {
   display: flex;
   gap: 12px;
+  transition: transform 0.2s;
+}
+
+.list > li:hover {
+  transform: translateX(2px);
 }
 
 .list > li > svg {
