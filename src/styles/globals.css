@@ -1,16 +1,18 @@
 :root {
   --primary: #ff4c5c;
-  --neutral-bg: rgba(11, 0, 46, 0.051);
   --text-default: #0b002e;
   --text-success: #3ab15e;
   --font-color-text: #222b55;
   --bdr-focus: #6666ff;
   --bg-app: #f3f2f7;
   --bg-content: #ffffff;
-
+  
   --radius-button-default: 12px;
-
+  --radius-block: 12px;
+  
   --padding-default: 4px;
+  
+  --btn-neutral-bg: rgba(11, 0, 46, 0.051);
 
   --btn-bg: var(--primary);
   --btn-text: #fff;
@@ -19,6 +21,10 @@
   --btn-shadow: 0 4px 12px rgba(255, 76, 92, 0.25);
   --btn-shadow-hover: 0 6px 16px rgba(255, 76, 92, 0.35);
   --btn-focus: 0 0 0 3px rgba(255, 76, 92, 0.35);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
 }
 
 body,
