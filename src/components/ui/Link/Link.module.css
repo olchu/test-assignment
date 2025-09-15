@@ -1,0 +1,60 @@
+.link {
+  display: inline-flex;
+  color: var(--link-color);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.s-sm {
+  font:
+    600 12px/1 'Poppins',
+    sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.s-xs {
+  font:
+    500 16px/1.25 'Poppins',
+    sans-serif;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.v-default {
+  color: var(--link-color);
+}
+.v-primary {
+  color: var(--link-primary);
+}
+.v-muted {
+  color: var(--link-muted);
+}
+
+.u-hover:hover {
+  text-decoration: underline;
+}
+.u-always {
+  text-decoration: underline;
+}
+.u-none {
+  text-decoration: none;
+}
+
+.link:hover {
+  background-color: var(--link-hover-bg);
+}
+.link:focus-visible {
+  outline: none;
+  box-shadow: var(--link-focus);
+}
+
+.text {
+  display: inline;
+}

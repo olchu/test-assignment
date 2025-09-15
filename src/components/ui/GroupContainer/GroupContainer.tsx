@@ -1,15 +1,11 @@
 import { ReactNode, CSSProperties } from 'react';
-import styles from './GroupConteiner.module.css';
+import styles from './GroupContainer.module.css';
+import { Space } from '@/types';
+import { toCss } from '@/utils/toCss';
 
-type Space = number | string;
 type Direction = 'row' | 'column';
 
-function toCssSpace(v?: Space): string | undefined {
-  if (v === undefined) return undefined;
-  return typeof v === 'number' ? `${v}px` : v; // 16 -> '16px'
-}
-
-export interface GroupConteinerProps {
+export interface GroupContainerProps {
   children: ReactNode;
   gap?: Space;
   padding?: Space;
@@ -18,18 +14,18 @@ export interface GroupConteinerProps {
   className?: string;
 }
 
-export const GroupConteiner = ({
+export const GroupСontainer = ({
   children,
   gap,
   padding,
   margin,
   direction = 'row',
   className,
-}: GroupConteinerProps) => {
+}: GroupContainerProps) => {
   const style: CSSProperties = {
-    gap: toCssSpace(gap),
-    padding: toCssSpace(padding),
-    margin: toCssSpace(margin),
+    gap: toCss(gap),
+    padding: toCss(padding),
+    margin: toCss(margin),
     flexDirection: direction,
   };
 

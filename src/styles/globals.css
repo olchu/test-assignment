@@ -1,5 +1,7 @@
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -13,49 +15,73 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
+}
+ul,
+ol {
+  list-style: none;
+  padding: 0;
 }
 
 :root {
   --primary: #ff4c5c;
   --text-default: #0b002e;
   --text-success: #3ab15e;
+  --text-light: rgba(11, 0, 46, 0.639);
   --font-color-text: #222b55;
   --bdr-focus: #6666ff;
   --bg-app: #f3f2f7;
   --bg-content: #ffffff;
-  
+
   --radius-button-default: 12px;
   --radius-block: 12px;
-  
+
   --padding-default: 4px;
-  
+
   --btn-neutral-bg: rgba(11, 0, 46, 0.051);
 
   --btn-bg: var(--primary);
   --btn-text: #fff;
-  --btn-bg-hover: #f43d4f;
-  --btn-bg-active: #e73547;
-  --btn-shadow: 0 4px 12px rgba(255, 76, 92, 0.25);
-  --btn-shadow-hover: 0 6px 16px rgba(255, 76, 92, 0.35);
-  --btn-focus: 0 0 0 3px rgba(255, 76, 92, 0.35);
+  --btn-bg-hover: rgb(237 57 72);
+  --btn-bg-active: #d6343f;
+  --btn-bg-focus: #d6343f;
+
+  --link-color: var(--text-light);
 }
 
 * {
@@ -67,4 +93,22 @@ html {
   background-color: var(--bg-app);
 }
 
+body,
+html,
+#root,
+.app {
+  height: 100%;
+}
 
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 20px;
+  }
+}
