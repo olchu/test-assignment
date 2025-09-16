@@ -9,6 +9,8 @@ import { Text } from '../ui/Text';
 import { GroupContainerProps } from '../ui/GroupContainer/GroupContainer';
 import illustration from '@/assets/coins-currency.png';
 import styles from './BusinessFundingBanner.module.css';
+import { useState } from 'react';
+import { ApplyModal } from '../ui/ApplyModal';
 
 type descGroupPropsType = Pick<GroupContainerProps, 'direction' | 'gap'>;
 
@@ -19,6 +21,8 @@ const featureList = [
 ];
 
 export const BusinessFundingBanner = () => {
+  const [applyOpen, setApplyOpen] = useState(false);
+
   const matches = useMediaQuery('(min-width: 600px)');
 
   const descGroupProps: descGroupPropsType = {
@@ -31,39 +35,48 @@ export const BusinessFundingBanner = () => {
   };
 
   return (
-    <Banner
-      title={
-        <Text align="left" as="h2" size="lg" className={styles.title}>
-          Get the Business Funding You Need
-        </Text>
-      }
-      description={
-        <GroupСontainer {...descGroupProps}>
-          <Text as="p" size="sm">
-            Expand your business with a flexible loan tailored to your needs. Whether you're
-            investing in new equipment, increasing inventory, or boosting cash flow, we offer quick
-            approvals and competitive rates to keep your business growing.
+    <>
+      <Banner
+        title={
+          <Text align="left" as="h2" size="lg" className={styles.title}>
+            Get the Business Funding You Need
           </Text>
-          <FeatureList items={featureList} />
-        </GroupСontainer>
-      }
-      actions={
-        <ButtonGroup>
-          <Button>Apply Now</Button>
-          <Link
-            external
-            href="https://finom.co"
-            underline="hover"
-            variant="default"
-            size="sm"
-            uppercase
-          >
-            More information
-          </Link>
-        </ButtonGroup>
-      }
-      media={<img src={illustration} alt="" aria-hidden="true" className={styles.art} />}
-      onClose={onClose}
-    />
+        }
+        description={
+          <GroupСontainer {...descGroupProps}>
+            <Text as="p" size="sm">
+              Expand your business with a flexible loan tailored to your needs. Whether you're
+              investing in new equipment, increasing inventory, or boosting cash flow, we offer
+              quick approvals and competitive rates to keep your business growing.
+            </Text>
+            <FeatureList items={featureList} />
+          </GroupСontainer>
+        }
+        actions={
+          <ButtonGroup>
+            <Button onClick={() => setApplyOpen(true)}>Apply Now</Button>
+            <Link
+              external
+              href="https://finom.co"
+              underline="hover"
+              variant="default"
+              size="sm"
+              uppercase
+            >
+              More information
+            </Link>
+          </ButtonGroup>
+        }
+        media={<img src={illustration} alt="" aria-hidden="true" className={styles.art} />}
+        onClose={onClose}
+      />
+      <ApplyModal
+        open={applyOpen}
+        onClose={() => setApplyOpen(false)}
+        onSuccess={() => {
+          setApplyOpen(false);
+        }}
+      />
+    </>
   );
 };

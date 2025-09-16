@@ -1,4 +1,4 @@
-# Finom — Responsive Funding Banner
+# Finom — Test assignment
 
 [**Live demo**](https://olchu.github.io/test-assignment/) · Built with **React + TypeScript + Vite**
 
