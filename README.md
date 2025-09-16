@@ -21,15 +21,19 @@
 
 ### Local development
 
+```bash
 npm install
 npm run dev
+```
 
 # Open http://localhost:5173/
 
 ### Production build
 
+```bash
 npm run build
 npm run preview
+```
 
 ### Deployment (GitHub Pages)
 
@@ -58,8 +62,11 @@ Published: https://olchu.github.io/test-assignment/
 - Checks: clicking `data-testid="banner-btn-close"` removes `data-testid="banner-element"` from the document (via `animationend/transitionend` simulation).
 
 Run:
+
+```bash
 npm run test
 npm run test:ci
+```
 
 ## Key decisions & why
 
