@@ -23,7 +23,7 @@ export const Text = ({
   const visual = size ?? as;
 
   const cls = [
-    styles.title,
+    styles.text,
     styles[`size-${visual}`],
     styles[`align-${align}`],
     className ?? '',

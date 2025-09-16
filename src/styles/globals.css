@@ -1,63 +1,3 @@
-/* 1. Use a more-intuitive box-sizing model */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* 2. Remove default margin */
-* {
-  margin: 0;
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;
-  max-width: 100%;
-}
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
-p {
-  text-wrap: pretty;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-wrap: balance;
-}
-ul,
-ol {
-  list-style: none;
-  padding: 0;
-}
-
 :root {
   --primary: #ff4c5c;
   --text-default: #0b002e;
@@ -83,10 +23,12 @@ ol {
 
   --link-color: var(--text-light);
   --link-color-hover: rgb(11 0 46);
+
+  --font-sans: "Poppins", Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-sans);
 }
 
 body,

@@ -33,7 +33,7 @@ export const BusinessFundingBanner = () => {
   return (
     <Banner
       title={
-        <Text align="left" as="h2" size="lg">
+        <Text align="left" as="h2" size="lg" className={styles.title}>
           Get the Business Funding You Need
         </Text>
       }

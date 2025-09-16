@@ -1,23 +1,29 @@
 .size-lg {
-  --fz: clamp(20px, 24px, 24px);
+  --fz: 24px;
   --fw: 600;
-  --lh: clamp(24px, 28px, 28px)
+  --lh: 28px;
 }
 
 .size-sm {
   --fz: 16px;
   --fw: 400;
-  --lh: 24px
+  --lh: 24px;
 }
 
-.title {
+.text {
   width: 100%;
   color: var(--text-default);
 
   font-size: var(--fz);
   font-weight: var(--fw);
   line-height: var(--lh);
-  
+
   letter-spacing: 0;
-  text-wrap: balance;
+}
+
+@media (max-width: 600px) {
+  .size-lg {
+    --fz: 20px;
+    --lh: 24px;
+  }
 }

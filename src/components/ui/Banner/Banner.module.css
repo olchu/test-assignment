@@ -11,7 +11,7 @@
   border-color: var(--bdr-focus);
   border-radius: var(--radius-block);
 
-  width: 700px;
+  max-width: 700px;
   overflow: hidden;
 
   transition:
@@ -83,4 +83,15 @@
 
 .close:hover {
   background: #ecefff;
+}
+
+@media (max-width: 600px) {
+  .close {
+    width:28px;
+    height: 28px;
+  }
+  .close >svg {
+    width:18.67px;
+    height:18.67px;
+  }
 }

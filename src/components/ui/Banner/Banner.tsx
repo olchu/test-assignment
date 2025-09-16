@@ -53,7 +53,7 @@ export function Banner({ title, description, actions, media, onClose }: BannerPr
       onTransitionEnd={handleTransitionEnd}
     >
       <button className={styles.close} aria-label="Close banner" onClick={handleClose}>
-        <CloseIcon />
+        <CloseIcon/>
       </button>
 
       {title}
