@@ -11,4 +11,9 @@ export default defineConfig({
     },
   },
   base: "/test-assignment/",
+  test: {
+    environment: "jsdom",
+    setupFiles: "./vitest.setup.ts",
+    css: true,
+  },
 });

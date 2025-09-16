@@ -49,11 +49,12 @@ export function Banner({ title, description, actions, media, onClose }: BannerPr
 
   return (
     <section
+      data-testid="banner-element"
       className={`${styles.banner} ${entering ? styles.entering : ''} ${closing ? styles.closing : ''}`}
       onTransitionEnd={handleTransitionEnd}
     >
-      <button className={styles.close} aria-label="Close banner" onClick={handleClose}>
-        <CloseIcon/>
+      <button className={styles.close} data-testid="banner-btn-close" aria-label="Close banner" onClick={handleClose}>
+        <CloseIcon />
       </button>
 
       {title}
