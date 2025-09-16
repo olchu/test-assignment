@@ -56,7 +56,15 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     .join(' ');
 
   return (
-    <a ref={ref} href={href} className={cls} target={computedTarget} rel={computedRel} {...rest}>
+    <a
+      ref={ref}
+      href={href}
+      className={cls}
+      target={computedTarget}
+      rel={computedRel}
+      tabIndex={0}
+      {...rest}
+    >
       {children}
     </a>
   );

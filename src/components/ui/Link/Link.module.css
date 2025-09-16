@@ -51,6 +51,5 @@
 }
 
 .link:focus-visible {
-  outline: none;
-  box-shadow: var(--link-focus);
+  outline: 2px solid var(--primary);
 }

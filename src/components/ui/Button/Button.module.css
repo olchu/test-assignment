@@ -56,6 +56,6 @@
 }
 
 .btn:focus-visible {
-  outline: 1px solid var(--btn-bg);
+  outline: 2px solid var(--primary);
   background: var(--btn-bg-focus);
 }
