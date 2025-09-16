@@ -16,7 +16,13 @@
 
   transition:
     box-shadow 0.25s ease,
-    transform 0.25s ease;
+    transform 0.25s ease,
+    opacity 0.2s ease,
+    translate 0.2s ease;
+}
+.entering {
+  opacity: 0;
+  translate: 0 8px;
 }
 
 @media (max-width: 600px) {
@@ -28,6 +34,25 @@
 
 .banner:hover {
   box-shadow: 0 12px 34px rgba(49, 55, 100, 0.16);
+}
+
+.closing {
+  opacity: 0;
+  translate: 0 -8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner {
+    transition: none;
+  }
+  .entering {
+    opacity: 1;
+    translate: none;
+  }
+  .closing {
+    opacity: 0;
+    translate: none;
+  }
 }
 
 .content {

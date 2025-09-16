@@ -25,36 +25,45 @@ export const BusinessFundingBanner = () => {
     gap: matches ? 40 : 20,
     direction: matches ? 'row' : 'column',
   };
-  
+
+  const onClose = () => {
+    console.log('Banner removed from dom');
+  };
+
   return (
-    <Banner>
-      <Text align="left" as="h2" size="lg">
-        Get the Business Funding You Need
-      </Text>
-
-      <GroupСontainer {...descGroupProps}>
-        <Text as="p" size="sm">
-          Expand your business with a flexible loan tailored to your needs. Whether you're investing
-          in new equipment, increasing inventory, or boosting cash flow, we offer quick approvals
-          and competitive rates to keep your business growing.
+    <Banner
+      title={
+        <Text align="left" as="h2" size="lg">
+          Get the Business Funding You Need
         </Text>
-        <FeatureList items={featureList} />
-      </GroupСontainer>
-
-      <ButtonGroup>
-        <Button >Apply Now</Button>
-        <Link
-          external
-          href="https://finom.co"
-          underline="hover"
-          variant="default"
-          size="sm"
-          uppercase
-        >
-          More information
-        </Link>
-      </ButtonGroup>
-      <img src={illustration} alt="" aria-hidden="true" className={styles.art}/>
-    </Banner>
+      }
+      description={
+        <GroupСontainer {...descGroupProps}>
+          <Text as="p" size="sm">
+            Expand your business with a flexible loan tailored to your needs. Whether you're
+            investing in new equipment, increasing inventory, or boosting cash flow, we offer quick
+            approvals and competitive rates to keep your business growing.
+          </Text>
+          <FeatureList items={featureList} />
+        </GroupСontainer>
+      }
+      actions={
+        <ButtonGroup>
+          <Button>Apply Now</Button>
+          <Link
+            external
+            href="https://finom.co"
+            underline="hover"
+            variant="default"
+            size="sm"
+            uppercase
+          >
+            More information
+          </Link>
+        </ButtonGroup>
+      }
+      media={<img src={illustration} alt="" aria-hidden="true" className={styles.art} />}
+      onClose={onClose}
+    />
   );
 };
