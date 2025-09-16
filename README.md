@@ -14,14 +14,13 @@
 - **Close behavior**: clicking the cross icon **removes the banner from the DOM** (per the task requirement).
 - **External link**: `More information` safely opens `finom.co` in a new tab (`rel="noopener noreferrer"`).
 - **Accessibility**: semantic structure (`<section>`, heading, real `<ul>` list), visible focus rings, and ARIA labels.
-- **Testing & hooks**: unit test asserts the banner is **removed from the DOM on close**; **Husky v9 hooks** run type checks, lint-staged, and tests automatically (details below).
+- **Testing & hooks**: unit test asserts the banner is **removed from the DOM on close**;
+- **Husky v9 hooks** run type checks, lint-staged, and tests automatically (details below).
 
 ## How to run
 
 ### Local development
 
-git clone https://github.com/olchu/test-assignment.git
-cd test-assignment
 npm install
 npm run dev
 
@@ -39,7 +38,7 @@ Published: https://olchu.github.io/test-assignment/
 
 ## Tech stack
 
-- React 18 + TypeScript
+- React 19 + TypeScript
 - Vite
 - CSS Modules
 - Poppins (Google Fonts)
@@ -48,11 +47,9 @@ Published: https://olchu.github.io/test-assignment/
 
 ## Quality & DX
 
-- **Husky v9 hooks**
-  - pre-commit → `npm run typecheck && npx lint-staged`
-  - pre-push → `npm run test:ci`
-- Lint-Staged formats/lints only staged files
 - ESLint + Prettier configs included
+- Lint-Staged formats/lints only staged files
+- Husky is installed (see `package.json` scripts), hooks can be added as needed
 
 ## Testing
 
@@ -76,11 +73,12 @@ npm run test:ci
 ## Screenshots
 
 ![Desktop](docs/screenshot-desktop.png)
-![Mobile](docs/screenshot-mobile.png)
+<img src="docs/screenshot-mobile.png" alt="Mobile" width="375px" />
 
-## Project structure
+- Each component keeps its own `.module.css` next to it.
+- `styles/globals.css` holds design tokens (colors, fonts) and base styles.
 
-# (same as above)
+---
 
 ## Task reference
 
