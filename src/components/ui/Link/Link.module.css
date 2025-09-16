@@ -1,6 +1,5 @@
 .link {
   display: inline-flex;
-  color: var(--link-color);
   text-decoration: none;
   cursor: pointer;
   border-radius: 8px;
@@ -30,6 +29,11 @@
 .v-default {
   color: var(--link-color);
 }
+
+.v-default:hover {
+  color: var(--link-color-hover);
+}
+
 .v-primary {
   color: var(--link-primary);
 }
@@ -47,14 +51,7 @@
   text-decoration: none;
 }
 
-.link:hover {
-  background-color: var(--link-hover-bg);
-}
 .link:focus-visible {
   outline: none;
   box-shadow: var(--link-focus);
-}
-
-.text {
-  display: inline;
 }

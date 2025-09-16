@@ -82,6 +82,7 @@ ol {
   --btn-bg-focus: #d6343f;
 
   --link-color: var(--text-light);
+  --link-color-hover: rgb(11 0 46);
 }
 
 * {

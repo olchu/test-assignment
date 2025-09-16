@@ -57,7 +57,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   return (
     <a ref={ref} href={href} className={cls} target={computedTarget} rel={computedRel} {...rest}>
-      <span className={styles.text}>{children}</span>
+      {children}
     </a>
   );
 });
